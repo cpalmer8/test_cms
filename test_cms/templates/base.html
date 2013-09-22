@@ -2,9 +2,11 @@
 <html>
     <head>
         {% render_block "css" %}
+        {% load menu_tags %}
     </head>
     <body>
         {% cms_toolbar %}
+        {% show_menu 0 100 100 100 %}
         {% placeholder base_content %}
         {% block base_content %} {% endblock %}
         {% render_block "js" %}
